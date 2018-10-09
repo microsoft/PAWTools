@@ -1,0 +1,39 @@
+CLASS USER
+
+CATEGORY "Internet Proxy Settings"
+
+KEYNAME "Software\Microsoft\Windows\CurrentVersion\Internet Settings"
+	POLICY "Automatic configuration"
+	EXPLAIN "Configure the automatic proxy configuration settings, including:  Checkbox to automatically detect settings  Automatic configuration script URL (example: http://proxy.example:8080/proxy.pac). Leave URL blank to disable auto-config script."
+	PART "Automatically detect settings" DROPDOWNLIST
+		VALUENAME "AutoDetect"
+		ITEMLIST
+		  NAME Disabled VALUE NUMERIC 0
+		  NAME Enabled VALUE NUMERIC 1
+		END ITEMLIST
+		NOSORT
+	END PART
+	PART "Use automatic configuration script:" EDITTEXT
+		VALUENAME "AutoConfigUrl"
+	END PART
+	END POLICY
+
+	POLICY "Proxy server"
+	EXPLAIN "Configure the proxy server settings, including:  Checkbox to use a proxy server; proxy server address and port number (example: server:port)  Proxy exceptions/bypass list (example: *.microsoft.com;*.windowsazure.com;<local>). Note: Include <local> in the bypass list to bypass the proxy for local addresses."
+	PART "Use a proxy server" DROPDOWNLIST
+		VALUENAME "ProxyEnable"
+		ITEMLIST
+		  NAME Enabled VALUE NUMERIC 1
+		  NAME Disabled VALUE NUMERIC 0
+		END ITEMLIST
+		NOSORT
+	END PART
+	PART "Proxy address and port number:" EDITTEXT
+		VALUENAME "ProxyServer"
+	END PART
+	PART "Exceptions - Do not use proxy server for addresses beginning with:" EDITTEXT
+		VALUENAME "ProxyOverride"
+	END PART
+	END POLICY
+
+END CATEGORY
