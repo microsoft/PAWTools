@@ -1,4 +1,4 @@
-@{
+﻿@{
 	# Script module or binary module file associated with this manifest
 	ModuleToProcess = 'PAWTools.psm1'
 	
@@ -25,9 +25,7 @@
 	
 	# Modules that must be imported into the global environment prior to importing
 	# this module
-	RequiredModules = @(
-		@{ ModuleName='PSFramework'; ModuleVersion='0.10.27.128' }
-	)
+	# RequiredModules = @( )
 	
 	# Assemblies that must be loaded prior to importing this module
 	# RequiredAssemblies = @('bin\PAWTools.dll')
@@ -39,7 +37,13 @@
 	# FormatsToProcess = @('xml\PAWTools.Format.ps1xml')
 	
 	# Functions to export from this module
-	FunctionsToExport = ''
+	FunctionsToExport = @(
+		'Export-PAWResources'
+		'Install-PAWPrerequisites'
+		'New-PAWGroup'
+		'New-PAWOrganizationalUnit'
+		'Set-PAWOUDelegation'
+	)
 	
 	# Cmdlets to export from this module
 	CmdletsToExport = ''

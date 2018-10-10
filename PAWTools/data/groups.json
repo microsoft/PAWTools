@@ -1,0 +1,110 @@
+[
+    {
+        "Name":  "Tier 0 Replication Maintenance",
+        "samAccountName":  "Tier0ReplicationMaintenance",
+        "GroupCategory":  "Security",
+        "GroupScope":  "Global",
+        "DisplayName":  "Tier 0 Replication Maintenance",
+        "OU":  "OU=Groups,OU=Tier 0,OU=Admin",
+        "Description":  "Members of this group are Tier 0 Replication Maintenance",
+        "Membership":  [
+
+                       ]
+    },
+    {
+        "Name":  "Tier 1 Server Maintenance",
+        "samAccountName":  "Tier1ServerMaintenance",
+        "GroupCategory":  "Security",
+        "GroupScope":  "Global",
+        "DisplayName":  "Tier 1 Server Maintenance",
+        "OU":  "OU=Groups,OU=Tier 1,OU=Admin",
+        "Description":  "Members of this group perform Tier 1 Server Maintenance",
+        "Membership":  [
+
+                       ]
+    },
+    {
+        "Name":  "Service Desk Operators",
+        "samAccountName":  "ServiceDeskOperators",
+        "GroupCategory":  "Security",
+        "GroupScope":  "Global",
+        "DisplayName":  "Service Desk Operators",
+        "OU":  "OU=Groups,OU=Tier 2,OU=Admin",
+        "Description":  "Members of this group are Service Desk Operators",
+        "Membership":  [
+
+                       ]
+    },
+    {
+        "Name":  "Workstation Maintenance",
+        "samAccountName":  "WorkstationMaintenance",
+        "GroupCategory":  "Security",
+        "GroupScope":  "Global",
+        "DisplayName":  "Workstation Maintenance",
+        "OU":  "OU=Groups,OU=Tier 2,OU=Admin",
+        "Description":  "Members of this group perform Workstation Maintenance",
+        "Membership":  [
+
+                       ]
+    },
+    {
+        "Name":  "Cloud Service Admins",
+        "samAccountName":  "cloudadmins",
+        "GroupCategory":  "Security",
+        "GroupScope":  "Global",
+        "DisplayName":  "Cloud Service Admins",
+        "OU":  "OU=Groups,OU=Tier 0,OU=Admin",
+        "Description":  "Members of this group are permitted to connect to pre-identified cloud services via Privileged Access Workstations",
+        "Membership":  [
+
+                       ]
+    },
+    {
+        "Name":  "PAW Users",
+        "samAccountName":  "pawusers",
+        "GroupCategory":  "Security",
+        "GroupScope":  "Global",
+        "DisplayName":  "PAW Users",
+        "OU":  "OU=Groups,OU=Tier 0,OU=Admin",
+        "Description":  "Members of this group are permitted to log onto Privileged Access Workstations",
+        "Membership":  [
+
+                       ]
+    },
+    {
+        "Name":  "PAW Maintenance",
+        "samAccountName":  "pawmaint",
+        "GroupCategory":  "Security",
+        "GroupScope":  "Global",
+        "DisplayName":  "PAW Maintenance",
+        "OU":  "OU=Groups,OU=Tier 0,OU=Admin",
+        "Description":  "Members of this group maintain and support Privileged Access Workstations",
+        "Membership":  [
+
+                       ]
+    },
+    {
+        "Name":  "Tier 1 Admins",
+        "samAccountName":  "tier1admins",
+        "GroupCategory":  "Security",
+        "GroupScope":  "Global",
+        "DisplayName":  "Tier 1 Admins",
+        "OU":  "OU=Groups,OU=Tier 1,OU=Admin",
+        "Description":  "Members of this group are Tier 1 Administrators",
+        "Membership":  [
+
+                       ]
+    },
+    {
+        "Name":  "Tier 2 Admins",
+        "samAccountName":  "tier2admins",
+        "GroupCategory":  "Security",
+        "GroupScope":  "Global",
+        "DisplayName":  "Tier 2 Admins",
+        "OU":  "OU=Groups,OU=Tier 2,OU=Admin",
+        "Description":  "Members of this group are Tier 2 Administrators",
+        "Membership":  [
+
+                       ]
+    }
+]

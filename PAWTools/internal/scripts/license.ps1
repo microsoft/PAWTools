@@ -1,3 +1,4 @@
+﻿<#
 New-PSFLicense -Product 'PAWTools' -Manufacturer 'Friedrich Weinmann' -ProductVersion $script:ModuleVersion -ProductType Module -Name MIT -Version "1.0.0.0" -Date (Get-Date "2018-10-09") -Text @"
 Copyright (c) 2018 Friedrich Weinmann
 
@@ -19,3 +20,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 "@
+#>

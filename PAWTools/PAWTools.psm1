@@ -1,8 +1,8 @@
-$script:ModuleRoot = $PSScriptRoot
+﻿$script:ModuleRoot = $PSScriptRoot
 $script:ModuleVersion = "1.0.0.0"
 
 # Detect whether at some level dotsourcing was enforced
-$script:doDotSource = Get-PSFConfigValue -FullName PAWTools.Import.DoDotSource -Fallback $false
+$script:doDotSource = $false
 if ($PAWTools_dotsourcemodule) { $script:doDotSource = $true }
 
 <#
@@ -14,10 +14,10 @@ This is important when testing for paths.
 #>
 
 # Detect whether at some level loading individual module files, rather than the compiled module was enforced
-$importIndividualFiles = Get-PSFConfigValue -FullName PAWTools.Import.IndividualFiles -Fallback $false
+$importIndividualFiles = $false
 if ($PAWTools_importIndividualFiles) { $importIndividualFiles = $true }
-if (Test-Path (Resolve-PSFPath -Path "$($script:ModuleRoot)\..\.git" -SingleItem -NewChild)) { $importIndividualFiles = $true }
-if (-not (Test-Path (Resolve-PSFPath "$($script:ModuleRoot)\commands.ps1" -SingleItem -NewChild))) { $importIndividualFiles = $true }
+if (Test-Path "$($script:ModuleRoot)\..\.git") { $importIndividualFiles = $true }
+if (-not (Test-Path "$($script:ModuleRoot)\commands.ps1")) { $importIndividualFiles = $true }
 	
 function Import-ModuleFile
 {
@@ -71,14 +71,14 @@ if ($importIndividualFiles)
 }
 else
 {
-	if (Test-Path (Resolve-PSFPath "$($script:ModuleRoot)\resourcesBefore.ps1" -SingleItem -NewChild))
+	if (Test-Path "$($script:ModuleRoot)\resourcesBefore.ps1")
 	{
 		. Import-ModuleFile -Path "$($script:ModuleRoot)\resourcesBefore.ps1"
 	}
 	
 	. Import-ModuleFile -Path "$($script:ModuleRoot)\commands.ps1"
 	
-	if (Test-Path (Resolve-PSFPath "$($script:ModuleRoot)\resourcesAfter.ps1" -SingleItem -NewChild))
+	if (Test-Path "$($script:ModuleRoot)\resourcesAfter.ps1")
 	{
 		. Import-ModuleFile -Path "$($script:ModuleRoot)\resourcesAfter.ps1"
 	}
