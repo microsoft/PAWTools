@@ -1,3 +1,10 @@
+# Introduction
+
+Resource kit to help with deploying a Privilege Access Workstation setup according to the [documentation](https://aka.ms/cyberpaw) on Microsoft docs.
+
+# Disclaimer
+
+This module is based on John Rodriguez' original work for the [Privileged Access Workstation](https://aka.ms/cyberpaw).
 
 # Contributing
 
